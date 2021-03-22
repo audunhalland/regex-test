@@ -217,7 +217,7 @@ fn pattern_to_regex_expr(ast_nodes: &[PatternASTNode], wildcard_expr: &str) -> O
     }
 }
 
-#[cfg(test)]
+// #[cfg(test)]
 pub mod test {
     use super::test_util;
     use super::*;

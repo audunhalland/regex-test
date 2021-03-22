@@ -186,7 +186,7 @@ fn pattern_asts_to_regex_string(pattern_asts: &[&[PatternASTNode]], wildcard_exp
         .join("|")
 }
 
-#[cfg(test)]
+// #[cfg(test)]
 pub mod test {
     use super::test_util;
     use super::*;

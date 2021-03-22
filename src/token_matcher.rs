@@ -1,12 +1,10 @@
 use std::collections::BTreeSet;
 
-mod automaton_matcher;
-mod hash_matcher;
-mod regex_matcher;
-mod regex_util;
-
-#[cfg(test)]
-mod test_util;
+pub mod automaton_matcher;
+pub mod hash_matcher;
+pub mod regex_matcher;
+pub mod regex_util;
+pub mod test_util;
 
 ///
 /// Abstraction over tantivy searcher with the functionality this module needs:
@@ -74,8 +72,7 @@ pub trait LookupDocFreqReciprocal {
     ) -> Option<DocFreqReciprocal>;
 }
 
-#[cfg(test)]
-mod tests {
+pub mod test {
     use super::*;
 
     use crate::PerfTimer;
@@ -172,8 +169,7 @@ mod tests {
         println!();
     }
 
-    #[test]
-    fn test_actual_matcher_implementations() {
+    pub fn test_actual_matcher_implementations() {
         assert_matches(&[&["a"]], "a", true);
         assert_matches(&[&["a"]], "b", false);
         assert_matches(&[&["a", "*"]], "a", true);

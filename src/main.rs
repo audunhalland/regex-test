@@ -63,3 +63,7 @@ impl PerfTimer {
         durations
     }
 }
+
+fn main() {
+    token_matcher::test::test_actual_matcher_implementations();
+}
